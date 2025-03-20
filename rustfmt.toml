@@ -1,0 +1,5 @@
+edition = "2024"
+indent_style = "Block"
+max_width = 80
+imports_granularity = "Module"
+group_imports = "StdExternalCrate"
