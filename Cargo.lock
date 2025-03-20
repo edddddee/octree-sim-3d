@@ -2111,9 +2111,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "73fea8450eea4bac3940448fb7ae50d91f034f941199fcd9d909a5a07aa455f0"
 dependencies = [
  "cfg-if",
+ "js-sys",
  "libc",
  "r-efi",
  "wasi 0.14.2+wasi-0.2.4",
+ "wasm-bindgen",
 ]
 
 [[package]]
@@ -3093,6 +3095,7 @@ name = "octree-sim-3d"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "getrandom 0.3.2",
  "itertools 0.14.0",
  "kdtrees",
  "rand 0.9.0",

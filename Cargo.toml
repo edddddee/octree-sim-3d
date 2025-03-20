@@ -7,7 +7,16 @@ edition = "2024"
 bevy = { version = "0.15.3", features = ["bevy_dev_tools", "dynamic_linking"] }
 kdtrees = { git = "https://github.com/edddddee/kdtrees.git", version = "0.1.0" }
 itertools = "0.14.0"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 rand = "0.9.0"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+rand = {version = "0.9.0", default-features = false, features = ["thread_rng"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies.getrandom]
+version = "0.3"
+features = ["wasm_js"]
 
 [profile.dev]
 opt-level = 1
